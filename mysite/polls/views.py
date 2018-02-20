@@ -6,10 +6,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, 'polls/index.html')
 
 def page1(request):
-    return HttpResponse("Page1.")
+    return render(request, 'polls/page1.html')
 
 def page2(request):
-    return HttpResponse("Page2")
+    return render(request, 'polls/page2.html')
