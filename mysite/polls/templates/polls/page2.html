@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 
 <html>
-    
     <body>
-
-        <ul>
-        	
-        	<table>
-        	        <thead>
-        	            <tr>
-        	                <th> User </th>
-        	                <th> Zipcode </th>
-        	                <th> Country </th>
-        	                <th> City </th>
-        	            </tr>
-        	        </thead>
-        	        <tbody>
-        	        {% for row in rows %}
-        	            <tr>
-        	                <td> {{ row.user }} </td>
-        	                <td> {{ row.zipcode }} </td>
-        	                <td> {{ row.country }} </td>
-        	                <td> {{ row.city }} </td>
-        	            </tr>
-        	        {% endfor %}
-        	        </tbody>
-        	    </table>
-    	</ul>
-
+     	<table>
+      	    <thead>
+       	        <tr>
+       	            <th> User </th>
+        	        <th> Zipcode </th>
+        	        <th> Country </th>
+        	        <th> City </th>
+        	    </tr>
+            </thead>
+       	    <tbody>
+      	 	    {% for row in rows %}
+        	        <tr>
+        	            <td> {{ row.user }} </td>
+        	            <td> {{ row.zipcode }} </td>
+        	            <td> {{ row.country }} </td>
+        	            <td> {{ row.city }} </td>
+        	        </tr>
+        	    {% endfor %}
+        	</tbody>
+        </table>
     </body>
 </html>
