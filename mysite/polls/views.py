@@ -5,11 +5,17 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from polls.models import User
+
 def index(request):
     return render(request, 'polls/index.html')
 
 def page1(request):
-    return render(request, 'polls/page1.html')
+	rows = User.objects.all()
+	context = {'rows': rows}
+	return render(request, 'polls/page1.html', context)
 
 def page2(request):
-    return render(request, 'polls/page2.html')
+	rows = User.objects.filter(zipcode='5')
+	context = {'rows': rows}
+	return render(request, 'polls/page2.html', context)
