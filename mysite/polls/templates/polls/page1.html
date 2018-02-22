@@ -2,6 +2,7 @@
 
 <html>
     <body>
+    	<p> All objects</p>
      	<table>
       	    <thead>
        	        <tr>
@@ -9,15 +10,52 @@
         	        <th> Zipcode </th>
         	        <th> Country </th>
         	        <th> City </th>
+        	        <th> Registration date and time </th>
+        	        <th> Years </th>
+
         	    </tr>
             </thead>
        	    <tbody>
-      	 	    {% for row in rows %}
+      	 	    {% for row1 in rows1 %}
         	        <tr>
-        	            <td> {{ row.user }} </td>
-        	            <td> {{ row.zipcode }} </td>
-        	            <td> {{ row.country }} </td>
-        	            <td> {{ row.city }} </td>
+        	            <td> {{ row1.user }} </td>
+        	            <td> {{ row1.zipcode }} </td>
+        	            <td> {{ row1.country }} </td>
+        	            <td> {{ row1.city }} </td>
+        	            <td> {{ row1.reg_date }} </td>
+        	            <td> {{ row1.years }} </td>
+        	        </tr>
+        	    {% endfor %}
+        	</tbody>
+        </table>
+        <br>
+        <p> Objects with defined time</p>
+        <table>
+        	<tbody>
+        	    {% for row2 in rows2 %}
+        	        <tr>
+        	            <td> {{ row2.user }} </td>
+        	            <td> {{ row2.zipcode }} </td>
+        	            <td> {{ row2.country }} </td>
+        	            <td> {{ row2.city }} </td>
+        	            <td> {{ row2.reg_date }} </td>
+        	            <td> {{ row2.years }} </td>
+        	        </tr>
+        	    {% endfor %}
+        	</tbody>
+        </table>
+        <br>
+        <p> Objects with defined range of years</p>
+        <table>
+        	<tbody>
+        	    {% for row3 in rows3 %}
+        	        <tr>
+        	            <td> {{ row3.user }} </td>
+        	            <td> {{ row3.zipcode }} </td>
+        	            <td> {{ row3.country }} </td>
+        	            <td> {{ row3.city }} </td>
+        	            <td> {{ row3.reg_date }} </td>
+        	            <td> {{ row3.years }} </td>
         	        </tr>
         	    {% endfor %}
         	</tbody>
